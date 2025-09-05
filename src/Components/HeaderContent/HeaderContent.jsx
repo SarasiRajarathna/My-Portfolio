@@ -3,7 +3,7 @@ import MenuLink from '../MenuLink/MenuLink'
 
 function HeaderContent() {
   return (
-    <div id='navcontent' className='bg-black text-white p-4 flex items-center justify-between ml-28'>
+    <div className='bg-black text-white p-4 flex items-center justify-between ml-28'>
         <a href="#logo" className="text-2xl font-bold">
           <img src="" alt="" /> </a>
 
@@ -18,7 +18,7 @@ function HeaderContent() {
       </div>  
             <a
              href="#contact"
-              className="mr-4 bg-gradient-to-r from-fuchsia-600 to-orange-500 hover:scale-105 text-white px-4 py-2 rounded-3xl shadow-md transition duration-300"
+              className="mr-4 bg-gradient-to-r from-fuchsia-600 to-yellow-500 hover:scale-105 text-white px-4 py-2 rounded-3xl shadow-md transition duration-300"
               >
              Connect With Me
             </a>
