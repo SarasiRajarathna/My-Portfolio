@@ -1,43 +1,60 @@
 import React from 'react'
 import profile_img from '../../../src/assets/Profile Pic.jpg'
 import { useState } from "react";
-import ToolkitLink from '../ToolkitLink/ToolkitLink';
+
+const skills = [
+  { title: "HTML & CSS", level: "75%" },
+  { title: "React JS", level: "65%" },
+  { title: "Tailwind CSS", level: "65%" },
+  { title: "Bootstrap", level: "50%" },
+  { title: "JavaScript", level: "48%" },
+  { title: "SQL", level: "70%" },
+  { title: "Java", level: "50%" },
+];
 
 const skillsData = {
   "All Tools": [
     { name: "VS Code" },
     { name: "SQL" },
-    { name: "Intellij IDE" }, 
+    { name: "Intellij IDE" },
+    { name: "HTML5" },
+    { name: "CSS3" },
+    { name: "jOuery" }, 
     { name: "Figma" },
     { name: "Illustrator" },
     { name: "Photoshop" },
+    { name: "Canva" },
     { name: "Git" },
-    { name: "GitHub" },
+    { name: "GitHub" }
   ],
   Development: [
     { name: "VS Code" },
     { name: "SQL" },
-    { name: "Intellij IDE" },  
+    { name: "Intellij IDE" },
+     { name: "HTML5" },
+    { name: "CSS3" },
+    { name: "jOuery" }
   ],
   "Design Tools": [
     { name: "Figma" },
     { name: "Illustrator" },
     { name: "Photoshop" },
+    { name: "Canva" }
   ],
   "Other Tools": [
     { name: "Git" },
-    { name: "GitHub" },
+    { name: "GitHub" }
   ],
 };
 
 function AboutUs() {
   
-  const [selected, setSelected] = useState("All Skills");
+  const [selected, setSelected] = useState("All Tools");
 
   return (
     <div className='flex flex-col items-center justify content-center gap-5 mt-20 mr-24'>
       <div className='relative'>
-        <h1 className='pt-0 pr-5 font-semibold text-6xl'>About Me</h1>
+        <h1 className='px-0 py-5 font-semibold text-6xl'>About Me</h1>
       </div>
 
       <div className='flex gap-20'>
@@ -51,19 +68,64 @@ function AboutUs() {
           <p className="text-lg text-gray-300 leading-relaxed max-w-5xl text-justify">My goal is to combine creativity and technical knowledge to design and develop applications that are both functional and engaging, while continuously learning and improving as a future IT professional.</p>
         </div>
 
-        <div className='flex flex-col gap-5'>
-          <div className='flex gap-12 items-center duration-0.3'><p className='w-32 font-semibold'>HTML & CSS</p><hr className='outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500' style={{width:"75%"}}/></div>
-          <div className='flex gap-12 items-center duration-0.3'><p className='w-32 font-semibold'>React JS</p><hr className='outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500' style={{width:"65%"}}/></div>
-          <div className='flex gap-12 items-center duration-0.3'><p className='w-32 font-semibold'>Tailwind CSS</p><hr className='outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500' style={{width:"65%"}}/></div>
-          <div className='flex gap-12 items-center duration-0.3'><p className='w-32 font-semibold'>Boostrap</p><hr className='outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500' style={{width:"50%"}}/></div>
-          <div className='flex gap-12 items-center duration-0.3'><p className='w-32 font-semibold'>JavaScript</p><hr className='outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500' style={{width:"48%"}}/></div>
-          <div className='flex gap-12 items-center duration-0.3'><p className='w-32 font-semibold'>SQL</p><hr className='outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500' style={{width:"70%"}}/></div>
-        </div> 
+        <div className="flex flex-col gap-5">
+         {skills.map((skill) => (
+          <div>
+            <h3 className="w-32 font-semibold">
+              {skill.title}
+            </h3>
 
+            <div className="w-full rounded-full h-3 overflow-hidden">
+              <div
+                className="outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500 hover:scale-110 transition-all duration-300"
+                style={{ width: skill.level }}>
+              </div>
+            </div>
+          </div>
+         ))}
+        </div>
+       </div>
+      </div>
+
+      <div className='items-center justify content-center'>
+        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl'>Technical <span className='text-yellow-600'>Toolkit</span></h2>
+        <p className='text-gray-400 max-w-6xl mx-auto mb-6'>A comprehensive set of proficiencies, from core programming languages
+        and robust frameworks to essential development tools and creative design
+        platforms.</p>
+
+       <div className="flex justify-center gap-4 mb-8">
+        {Object.keys(skillsData).map((category) => (
+          <button
+            key={category}
+            onClick={() => setSelected(category)}
+            className={`px-4 py-2 rounded-full font-medium transition ${
+              selected === category
+                ? "bg-gradient-to-r from-fuchsia-600 to-yellow-500 text-black"
+                : "bg-gray-800 hover:bg-gradient-to-r from-fuchsia-600 to-yellow-500"
+            }`}
+          >
+            {category}
+          </button>
+        ))}
+       </div>
+
+       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        {skillsData[selected].map((skill, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition"
+          >
+            <p className="text-lg font-semibold">{skill.name}</p>
+          </div>
+        ))}
        </div>
 
       </div>
+
+      
+     
     </div>
+    
   )
 }
 

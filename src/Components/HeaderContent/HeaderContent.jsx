@@ -11,8 +11,8 @@ function HeaderContent() {
         <div className='flex space-x-10'>
             <MenuLink linkname="Home" url="#Home"/>
             <MenuLink linkname="About Me" url="#About Me"/>
-            <MenuLink linkname="Projects" url="#Projects"/>
             <MenuLink linkname="Skills" url="#Skills"/>
+            <MenuLink linkname="Projects" url="#Projects"/>
             <MenuLink linkname="Contact" url="#Contact"/>
         </div>
       </div>  
