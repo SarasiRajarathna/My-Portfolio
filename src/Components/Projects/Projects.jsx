@@ -16,7 +16,7 @@ const myProjects = [
 
 function Projects() {
   return (
-    <div className='flex flex-col items-center justify content-center gap-20 mx-40 my-20'>
+    <div id='projects' className='flex flex-col items-center justify content-center gap-20 mx-40 my-20'>
         <div className='relative'>
             <h1 className='px-7 py-0 text-6xl font-semibold'>My Featured Projects</h1>
         </div>
@@ -29,7 +29,7 @@ function Projects() {
           />
         ))}
         </div>
-        <div className='flex gap-2 rounded-lg border-2 px-4 py-4 border-white text-lg font-medium mb-20 hover:border-fuchsia-600 hover:scale-110 transition-all duration-300 cursor-pointer'>
+        <div className='flex gap-2 rounded-lg border-2 px-4 py-4 border-white text-lg font-medium mb-0 hover:border-fuchsia-600 hover:scale-110 transition-all duration-300 cursor-pointer'>
           <p className='text-gray-400 hover:text-white'>Show More</p>
         </div>
     </div>

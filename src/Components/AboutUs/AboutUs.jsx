@@ -52,9 +52,9 @@ function AboutUs() {
   const [selected, setSelected] = useState("All Tools");
 
   return (
-    <div className='flex flex-col items-center justify content-center gap-5 mt-20 mr-24'>
+    <div id='about' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
       <div className='relative'>
-        <h1 className='px-0 py-5 font-semibold text-6xl'>About Me</h1>
+        <h1 className='px-7 py-0 font-semibold text-6xl'>About Me</h1>
       </div>
 
       <div className='flex gap-20'>
@@ -88,7 +88,7 @@ function AboutUs() {
       </div>
 
       <div className='items-center justify content-center'>
-        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl'>Technical <span className='text-yellow-600'>Toolkit</span></h2>
+        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl'>Technical <span className='bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent'>Toolkit</span></h2>
         <p className='text-gray-400 max-w-6xl mx-auto mb-6'>A comprehensive set of proficiencies, from core programming languages
         and robust frameworks to essential development tools and creative design
         platforms.</p>

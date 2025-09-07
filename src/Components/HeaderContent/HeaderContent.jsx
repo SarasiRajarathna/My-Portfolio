@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuLink from '../MenuLink/MenuLink'
 
 function HeaderContent() {
+
+  const [menu,setmenu]= useState("Home")
   return (
     <div className='bg-black text-white p-4 flex items-center justify-between ml-28'>
         <a href="#logo" className="text-2xl font-bold">
@@ -9,11 +11,11 @@ function HeaderContent() {
 
       <div className='flex-1 flex justify-center'>
         <div className='flex space-x-10'>
-            <MenuLink linkname="Home" url="#Home"/>
-            <MenuLink linkname="About Me" url="#About Me"/>
-            <MenuLink linkname="Skills" url="#Skills"/>
-            <MenuLink linkname="Projects" url="#Projects"/>
-            <MenuLink linkname="Contact" url="#Contact"/>
+            <MenuLink linkname="Home" url="#Home" onClick={() => setMenu("Home")}/>
+            <MenuLink linkname="About Me" url="#About Me" onClick={() => setMenu("About Me")}/>
+            <MenuLink linkname="Skills" url="#Skills" onClick={() => setMenu("Skills")}/>
+            <MenuLink linkname="Projects" url="#Projects" onClick={() => setMenu("Projects")}/>
+            <MenuLink linkname="Contact" url="#Contact" onClick={() => setMenu("Contact")}/>
         </div>
       </div>  
             <a
