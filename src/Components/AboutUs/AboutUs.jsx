@@ -52,7 +52,7 @@ function AboutUs() {
   const [selected, setSelected] = useState("All Tools");
 
   return (
-    <div id='about' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
+    <div id='About Me' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
       <div className='relative'>
         <h1 className='px-7 py-0 font-semibold text-6xl'>About Me</h1>
       </div>
@@ -69,8 +69,8 @@ function AboutUs() {
         </div>
 
         <div className="flex flex-col gap-5">
-         {skills.map((skill) => (
-          <div>
+         {skills.map((skill, index) => (
+          <div key={index}>
             <h3 className="w-32 font-semibold">
               {skill.title}
             </h3>

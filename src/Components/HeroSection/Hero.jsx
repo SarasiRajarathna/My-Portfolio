@@ -3,7 +3,7 @@ import profile_img from '../../../src/assets/Profile Pic.jpg'
 
 function Hero() {
   return (
-    <div id='home' className='flex items-center flex-col gap-9'>
+    <div id='Home' className='flex items-center flex-col gap-9'>
         <img src={profile_img} alt="Profile" className='mt-32 w-64 h-64 md:w-75 md:h-75 lg:w-90 lg:h-90 rounded-full object-cover shadow-2xl border-2 hover:scale-105 transition-transform duration-300'/>
         <h1 className='w-2/4 text-center text-4xl font-semibold'> <span className='bg-gradient-to-r from-fuchsia-600 to-yellow-500 bg-clip-text text-transparent'>I'm Sarasi Rajarathna</span>, passionate UI/UX designer and frontend developer based in Sri Lanka.</h1>
         <p className='w-2/4 text-center text-lg leading-10'>I'm currently studying BSc(Hons) in Information Systems at Faculty of Computing at Sabaragamuwa University of Sri Lanka.</p>

@@ -15,7 +15,7 @@ function Skills() {
   let btt="Read More"
 
   return (
-    <div id='skills' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
+    <div id='Skills' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
         <div className='relative'>
             <h1 className='pt-0 pr-5 font-semibold text-6xl'>My Skills</h1>
         </div>

@@ -5,7 +5,7 @@ import location_icon from '../../assets/Location.svg'
 
 function Contact() {
   return (
-    <div id='contact' className='flex flex-col items-center justify content-center gap-20 mx-20 mt-40 mb-20'>
+    <div id='Contact' className='flex flex-col items-center justify content-center gap-20 mx-20 mt-40 mb-20'>
         <div className='relative'>
             <h1 className='px-7 py-0 mt- text-6xl font-semibold'>Get in touch</h1>
         </div>

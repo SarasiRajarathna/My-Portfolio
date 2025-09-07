@@ -16,7 +16,7 @@ const myProjects = [
 
 function Projects() {
   return (
-    <div id='projects' className='flex flex-col items-center justify content-center gap-20 mx-40 my-20'>
+    <div id='Projects' className='flex flex-col items-center justify content-center gap-20 mx-40 my-20'>
         <div className='relative'>
             <h1 className='px-7 py-0 text-6xl font-semibold'>My Featured Projects</h1>
         </div>

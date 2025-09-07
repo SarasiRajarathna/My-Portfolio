@@ -4,10 +4,10 @@ import user_icon from '../../assets/User icon.svg'
 function FooterContent() {
   return (
     <footer className="bg-black text-gray-300 px-8 py-12">
-      {/* Top Section */}
+   
       <div className="flex flex-col lg:flex-row justify-between items-center gap-10 max-w-6xl mx-auto">
         
-        {/* Left Side - About */}
+        
         <div className="lg:w-1/2 text-center lg:text-left">
           <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-500 to-orange-400 bg-clip-text text-transparent">
             Sarasi Rajarathna
@@ -19,7 +19,7 @@ function FooterContent() {
           </p>
         </div>
 
-        {/* Right Side - Email Subscribe */}
+       
         <div className="flex items-center gap-3 bg-gray-800 rounded-full px-4 py-2 w-full lg:w-auto">
           <img src={user_icon} alt="User Icon" className="w-5 h-5 opacity-70" />
           <input
@@ -33,10 +33,10 @@ function FooterContent() {
         </div>
       </div>
 
-      {/* Divider */}
+     
       <hr className="border-gray-500 my-8" />
 
-      {/* Bottom Section */}
+      
       <div className="flex flex-col md:flex-row justify-between items-center text-sm max-w-6xl mx-auto gap-4">
         <p className="text-gray-500">
           © 2025 Sarasi Rajarathna. All rights reserved.
