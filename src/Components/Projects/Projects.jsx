@@ -4,6 +4,7 @@ import Project2_img from '../../../src/assets/Project 2.jpg'
 import Project3_img from '../../../src/assets/Project 3.jpg'
 import Project4_img from '../../../src/assets/Project 4.jpg'
 import Project5_img from '../../../src/assets/Project 5.jpg'
+import Project6_img from '../../../src/assets/Project 6.jpg'
 
 const myProjects = [
     {id: "01", title: "Calculator Hub (HTML, CSS, & Js)", p_img:Project1_img},
@@ -11,7 +12,7 @@ const myProjects = [
     {id: "03", title: "Interior Design (HTML & CSS)", p_img:Project3_img},
     {id: "04", title: "Coffee Bliss (HTML, CSS, & Js)", p_img:Project4_img},
     {id: "05", title: "Simple Calculator (React.Js & Boostrap)", p_img:Project5_img},
-    {id: "06", title: "My Portfolio (React.Js & Tailwind CSS)", p_img:Project1_img}
+    {id: "06", title: "My Portfolio (React.Js & Tailwind CSS)", p_img:Project6_img}
 ]
 
 function Projects() {
