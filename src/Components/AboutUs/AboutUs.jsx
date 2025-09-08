@@ -1,5 +1,5 @@
 import React from 'react'
-import profile_img from '../../../src/assets/Profile 2.jpg'
+import profile_img from '../../assets/Profile 2.jpg'
 import { useState } from "react";
 
 const skills = [
@@ -90,8 +90,7 @@ function AboutUs() {
       </div>
 
       <div className='items-center justify content-center'>
-        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent animate-gradient-x
-          '>Technical <span className='bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent'>Toolkit</span></h2>
+        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl text-center'>Technical <span className='bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent'>Toolkit</span></h2>
         <p className='text-gray-400 max-w-6xl mx-auto mb-6'>A comprehensive set of proficiencies, from core programming languages
         and robust frameworks to essential development tools and creative design
         platforms.</p>
@@ -116,9 +115,9 @@ function AboutUs() {
         {skillsData[selected].map((skill, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-4 rounded-xl shadow hover:scale-105 transition"
+            className="bg-gray-800 p-4 rounded-xl shadow-lg hover:scale-105 hover:shadow-2xl hover:shadow-fuchsia-500/40 transition-all duration-300 cursor-pointer"
           >
-            <p className="text-lg font-semibold">{skill.name}</p>
+            <p className="text-lg font-semibold text-white text-center">{skill.name}</p>
           </div>
         ))}
        </div>
