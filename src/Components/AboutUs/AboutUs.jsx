@@ -1,5 +1,5 @@
 import React from 'react'
-import profile_img from '../../../src/assets/Profile Pic.jpg'
+import profile_img from '../../../src/assets/Profile 2.jpg'
 import { useState } from "react";
 
 const skills = [
@@ -55,11 +55,13 @@ function AboutUs() {
     <div id='About Me' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
       <div className='relative'>
         <h1 className='px-7 py-0 font-semibold text-6xl'>About Me</h1>
+        <div className="h-1 w-40 mx-auto mt-4 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600"></div>
       </div>
 
-      <div className='flex gap-20'>
-        <div className='about left'>
-          <img src={profile_img} alt="Profile" className='"w-64 h-64 object-cover rounded-lg shadow-2xl "'/>
+      <div className='flex gap-20 items-center'>
+        <div className='about left flex-shrink-0'>
+          <img src={profile_img} alt="Profile" className='w-64 h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 hover:shadow-xl hover:shadow-fuchsia-600/40 transition-all duration-300
+           '/>
         </div>
 
        <div className='flex flex-col gap-8 justify-center '> 
@@ -77,7 +79,7 @@ function AboutUs() {
 
             <div className="w-full rounded-full h-3 overflow-hidden">
               <div
-                className="outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-500 hover:scale-110 transition-all duration-300"
+                className="outline-none border-none w-2/4 h-2 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600 hover:scale-110 transition-all duration-1000 ease-out"
                 style={{ width: skill.level }}>
               </div>
             </div>
@@ -88,7 +90,8 @@ function AboutUs() {
       </div>
 
       <div className='items-center justify content-center'>
-        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl'>Technical <span className='bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent'>Toolkit</span></h2>
+        <h2 className='px-0 py-8 items-center justify-center font-medium text-4xl bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent animate-gradient-x
+          '>Technical <span className='bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent'>Toolkit</span></h2>
         <p className='text-gray-400 max-w-6xl mx-auto mb-6'>A comprehensive set of proficiencies, from core programming languages
         and robust frameworks to essential development tools and creative design
         platforms.</p>

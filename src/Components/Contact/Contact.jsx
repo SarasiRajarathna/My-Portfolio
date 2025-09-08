@@ -8,7 +8,9 @@ function Contact() {
     <div id='Contact' className='flex flex-col items-center justify content-center gap-20 mx-20 mt-40 mb-20'>
         <div className='relative'>
             <h1 className='px-7 py-0 mt- text-6xl font-semibold'>Get in touch</h1>
+            <div className="h-1 w-40 mx-auto mt-4 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600"></div>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-6xl">
           <div className="flex flex-col gap-6">
             <h1 className="text-5xl font-semibold bg-gradient-to-r from-fuchsia-600 to-yellow-600 bg-clip-text text-transparent">Let's Talk</h1>

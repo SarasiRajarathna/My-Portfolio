@@ -19,7 +19,9 @@ function Projects() {
     <div id='Projects' className='flex flex-col items-center justify content-center gap-20 mx-40 my-20'>
         <div className='relative'>
             <h1 className='px-7 py-0 text-6xl font-semibold'>My Featured Projects</h1>
+            <div className="h-1 w-40 mx-auto mt-4 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600"></div>
         </div>
+
         <div className='grid grid-cols-3 gap-10'>
           {myProjects.map((project) => (
           <img className='box-border border-2 border-transparent w-96 h-64 hover:border-fuchsia-600 rounded-lg hover:scale-110 transition-all duration-300 cursor-pointer'

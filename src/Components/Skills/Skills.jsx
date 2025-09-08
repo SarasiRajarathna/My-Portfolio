@@ -18,6 +18,7 @@ function Skills() {
     <div id='Skills' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
         <div className='relative'>
             <h1 className='pt-0 pr-5 font-semibold text-6xl'>My Skills</h1>
+            <div className="h-1 w-40 mx-auto mt-4 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600"></div>
         </div>
 
         <div className="grid grid-cols-3 gap-10">
