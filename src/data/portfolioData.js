@@ -2,8 +2,8 @@
 // PORTFOLIO DATA - Central configuration for all content
 // ============================================================
 
-// CV configuration — update this path when the CV PDF is available
-export const CV_URL = '/My-Portfolio/public/H.M.S.B. Rajarathna.pdf';
+// CV configuration — root-relative path served from public/
+export const CV_URL = '/H.M.S.B.%20Rajarathna.pdf';
 
 // Contact & Profile Information
 export const CONTACT = {
