@@ -1,42 +1,139 @@
-import React from 'react'
-import Project1_img from '../../../src/assets/Project 1.jpg'
-import Project2_img from '../../../src/assets/Project 2.jpg'
-import Project3_img from '../../../src/assets/Project 3.jpg'
-import Project4_img from '../../../src/assets/Project 4.jpg'
-import Project5_img from '../../../src/assets/Project 5.jpg'
-import Project6_img from '../../../src/assets/Project 6.jpg'
+import React, { useState } from 'react';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { projects } from '../../data/portfolioData';
+import ProjectCard from './ProjectCard';
+import ProjectModal from './ProjectModal';
 
-const myProjects = [
-    {id: "01", title: "Calculator Hub (HTML, CSS, & Js)", p_img:Project1_img},
-    {id: "02", title: "Vita-Derma (HTML & CSS)", p_img:Project2_img},
-    {id: "03", title: "Interior Design (HTML & CSS)", p_img:Project3_img},
-    {id: "04", title: "Coffee Bliss (HTML, CSS, & Js)", p_img:Project4_img},
-    {id: "05", title: "Simple Calculator (React.Js & Boostrap)", p_img:Project5_img},
-    {id: "06", title: "My Portfolio (React.Js & Tailwind CSS)", p_img:Project6_img}
-]
+const FILTERS = [
+  { id: 'all', label: 'All' },
+  { id: 'full-stack', label: 'Full-Stack' },
+  { id: 'frontend', label: 'Frontend' },
+  { id: 'ui-ux', label: 'UI/UX' },
+];
 
 function Projects() {
-  return (
-    <div id='Projects' className='flex flex-col items-center justify content-center gap-20 mx-40 my-20'>
-        <div className='relative'>
-            <h1 className='px-7 py-0 text-6xl font-semibold'>My Featured Projects</h1>
-            <div className="h-1 w-40 mx-auto mt-4 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600"></div>
-        </div>
+  const [activeFilter, setActiveFilter] = useState('all');
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [sectionRef, isVisible] = useScrollAnimation();
 
-        <div className='grid grid-cols-3 gap-10'>
-          {myProjects.map((project) => (
-          <img className='box-border border-2 border-transparent w-96 h-64 hover:border-fuchsia-600 rounded-lg hover:scale-110 transition-all duration-300 cursor-pointer'
-            key={project.id} 
-            src={project.p_img || "/placeholder.png"} 
-            alt={project.title} 
-          />
-        ))}
+  const filtered =
+    activeFilter === 'all'
+      ? projects
+      : projects.filter((p) => p.category === activeFilter || (activeFilter === 'ui-ux' && p.category === 'uiux'));
+
+  return (
+    <>
+      <section
+        id="projects"
+        ref={sectionRef}
+        aria-label="Projects"
+        style={{
+          padding: '6rem 0',
+          background: 'var(--bg-secondary)',
+          position: 'relative',
+          overflow: 'hidden',
+        }}
+      >
+        {/* BG decoration */}
+        <div
+          aria-hidden="true"
+          style={{
+            position: 'absolute',
+            bottom: '-80px',
+            left: '-60px',
+            width: '400px',
+            height: '400px',
+            background: 'radial-gradient(circle, rgba(168,85,247,0.06) 0%, transparent 70%)',
+            borderRadius: '50%',
+            pointerEvents: 'none',
+          }}
+        />
+
+        <div className="section-wrapper" style={{ position: 'relative', zIndex: 1 }}>
+          {/* Heading */}
+          <div className={`fade-up ${isVisible ? 'visible' : ''}`} style={{ marginBottom: '3rem' }}>
+            <span className="section-label">What I've Built</span>
+            <h2 className="section-title">My Projects</h2>
+            <div className="section-underline" />
+            <p style={{ color: 'var(--text-secondary)', maxWidth: '540px', fontSize: '1rem' }}>
+              A collection of full-stack applications, civic tech solutions, and UI/UX design platforms.
+            </p>
+          </div>
+
+          {/* Filter buttons */}
+          <div
+            className={`fade-up delay-200 ${isVisible ? 'visible' : ''}`}
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2.5rem' }}
+            role="tablist"
+            aria-label="Project categories"
+          >
+            {FILTERS.map(({ id, label }) => (
+              <button
+                key={id}
+                role="tab"
+                aria-selected={activeFilter === id}
+                className={`filter-btn ${activeFilter === id ? 'active' : ''}`}
+                onClick={() => setActiveFilter(id)}
+                id={`project-filter-${id}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+
+          {/* Project grid */}
+          <div
+            className={`fade-up delay-300 ${isVisible ? 'visible' : ''}`}
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+              gap: '1.5rem',
+            }}
+            role="list"
+            aria-live="polite"
+            aria-label="Projects list"
+          >
+            {filtered.map((project, i) => (
+              <div
+                key={project.id}
+                role="listitem"
+                style={{
+                  transition: 'opacity 0.3s ease, transform 0.3s ease',
+                  transitionDelay: `${i * 60}ms`,
+                }}
+              >
+                <ProjectCard
+                  project={project}
+                  onViewDetails={setSelectedProject}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Empty state */}
+          {filtered.length === 0 && (
+            <div
+              style={{
+                textAlign: 'center',
+                padding: '4rem 2rem',
+                color: 'var(--text-muted)',
+              }}
+            >
+              <p>No projects in this category yet.</p>
+            </div>
+          )}
         </div>
-        <div className='flex gap-2 rounded-lg border-2 px-4 py-4 border-white text-lg font-medium mb-0 hover:border-fuchsia-600 hover:scale-110 transition-all duration-300 cursor-pointer'>
-          <p className='text-gray-400 hover:text-white'>Show More</p>
-        </div>
-    </div>
-  )
+      </section>
+
+      {/* Modal */}
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
+    </>
+  );
 }
 
-export default Projects
+export default Projects;

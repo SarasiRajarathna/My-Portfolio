@@ -3,7 +3,7 @@ import MenuLink from '../MenuLink/MenuLink'
 
 function HeaderContent() {
 
-  const [menu,setmenu]= useState("Home")
+  const [_menu, setMenu] = useState("Home");
   return (
     <div className='fixed top-0 left-0 w-full bg-black/50 backdrop-blur-md text-white p-4 flex items-center justify-between z-50 shadow-lg'>
         <a href="#logo" className="text-2xl font-bold"> </a>

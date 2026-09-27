@@ -1,41 +1,126 @@
-import React from 'react'
-
-const SkillsData = [
-    {id: "01", title: "Web Design"},
-    {id: "02", title: "App Design"},
-    {id: "03", title: "Graphic Design"},
-    {id: "04", title: "UI/UX Design"},
-    {id: "05", title: "Social Media"},
-    {id: "06", title: "Content Writing"}
-]
+import React, { useState } from 'react';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { skillCategories } from '../../data/portfolioData';
 
 function Skills() {
+  const [activeCategory, setActiveCategory] = useState(skillCategories[0].id);
+  const [sectionRef, isVisible] = useScrollAnimation();
 
-  let description="Web development is the process of building and maintaining websites to ensure they are functional, user-friendly, and visually appealing.";  
-  let btt="Read More"
+  const currentSkills = skillCategories.find((c) => c.id === activeCategory)?.skills || [];
 
   return (
-    <div id='Skills' className='flex flex-col items-center justify content-center gap-20 mx-20 my-40'>
-        <div className='relative'>
-            <h1 className='pt-0 pr-5 font-semibold text-6xl'>My Skills</h1>
-            <div className="h-1 w-40 mx-auto mt-4 rounded-full bg-gradient-to-r from-fuchsia-600 to-yellow-600"></div>
+    <section
+      id="skills"
+      ref={sectionRef}
+      aria-label="Skills"
+      style={{
+        padding: '6rem 0',
+        background: 'var(--bg-primary)',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Background orb */}
+      <div
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          right: '-100px',
+          transform: 'translateY(-50%)',
+          width: '400px',
+          height: '400px',
+          background: 'radial-gradient(circle, rgba(234,88,12,0.06) 0%, transparent 70%)',
+          borderRadius: '50%',
+          pointerEvents: 'none',
+        }}
+      />
+
+      <div className="section-wrapper" style={{ position: 'relative', zIndex: 1 }}>
+        {/* Section heading */}
+        <div className={`fade-up ${isVisible ? 'visible' : ''}`} style={{ marginBottom: '3rem' }}>
+          <span className="section-label">What I Work With</span>
+          <h2 className="section-title">My Skills</h2>
+          <div className="section-underline" />
+          <p style={{ color: 'var(--text-secondary)', maxWidth: '540px', fontSize: '1rem' }}>
+            A curated set of technologies and tools across frontend, backend, design, quality assurance, and development workflows.
+          </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-10">
-         {SkillsData.map((Skill) => (
-          <div key={Skill.id} className="p-6 border rounded-lg shadow-md hover:scale-110 transition-all duration-300">
-            <h3 className="text-xl font-bold">{Skill.id}</h3>
-            <h2 className='text-3xl font-bold'>{Skill.title}</h2>
-            <p className="text-sm text-gray-400 mt-2">{description}</p>
-            <button className="mt-4 px-4 py-2 bg-gradient-to-r from-fuchsia-600 to-yellow-500 text-white rounded-lg hover:scale-110 transition-all duration-300">
-              {btt}
+        {/* Category tabs */}
+        <div
+          className={`fade-up delay-200 ${isVisible ? 'visible' : ''}`}
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '0.5rem',
+            marginBottom: '2.5rem',
+          }}
+          role="tablist"
+          aria-label="Skill categories"
+        >
+          {skillCategories.map(({ id, label }) => (
+            <button
+              key={id}
+              role="tab"
+              aria-selected={activeCategory === id}
+              aria-controls={`skills-panel-${id}`}
+              id={`skills-tab-${id}`}
+              className={`filter-btn ${activeCategory === id ? 'active' : ''}`}
+              onClick={() => setActiveCategory(id)}
+            >
+              {label}
             </button>
-          </div>
-         ))}
+          ))}
         </div>
-        
-    </div>
-  )
+
+        {/* Skills grid */}
+        <div
+          id={`skills-panel-${activeCategory}`}
+          role="tabpanel"
+          aria-labelledby={`skills-tab-${activeCategory}`}
+          className={`fade-up delay-300 ${isVisible ? 'visible' : ''}`}
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
+            gap: '0.75rem',
+          }}
+        >
+          {currentSkills.map(({ name, icon }, index) => (
+            <div
+              key={name}
+              className="skill-chip"
+              style={{
+                justifyContent: 'center',
+                padding: '0.75rem 0.5rem',
+                borderRadius: 'var(--radius-md)',
+                flexDirection: 'column',
+                gap: '0.5rem',
+                transitionDelay: `${index * 30}ms`,
+              }}
+              role="listitem"
+            >
+              <span style={{ fontSize: '1.25rem' }} aria-hidden="true">{icon}</span>
+              <span style={{ textAlign: 'center', fontSize: '0.8rem' }}>{name}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* Proficiency note */}
+        <p
+          className={`fade-up delay-500 ${isVisible ? 'visible' : ''}`}
+          style={{
+            marginTop: '2rem',
+            fontSize: '0.8rem',
+            color: 'var(--text-muted)',
+            fontStyle: 'italic',
+          }}
+        >
+          * Skills listed represent areas of active learning and project experience. Proficiency levels vary by technology.
+        </p>
+      </div>
+    </section>
+  );
 }
 
-export default Skills
+export default Skills;
