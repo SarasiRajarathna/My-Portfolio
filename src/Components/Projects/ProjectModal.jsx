@@ -6,11 +6,12 @@ import { Github, Figma } from '../icons/SocialIcons';
 import agroguardImg from '../../assets/AgroGuard-AI.png';
 import calculatorImg from '../../assets/Calculator Hub.jpg';
 import govcareImg from '../../assets/GovCare.png';
-import lankawayImg from '../../assets/LankaWay.png';
 import orixaImg from '../../assets/ORIXA.png';
-import ridegoImg from '../../assets/RideGo.png';
+import ridegoImg from '../../assets/RideGo.jpg';
 import velouraImg from '../../assets/Veloura.png';
 import vitadermaImg from '../../assets/Vita-Derma.png';
+import railwaysImg from '../../assets/Sri Lanka Railways.png';
+import keellsImg from '../../assets/Keells App Redesign.png';
 
 const PROJECT_IMAGES = {
   govcare: govcareImg,
@@ -21,8 +22,8 @@ const PROJECT_IMAGES = {
   orixa: orixaImg,
   vitaderma: vitadermaImg,
   calculatorhub: calculatorImg,
-  lankaway: lankawayImg,
-  'railways-case-study': null,
+  'railways-case-study': railwaysImg,
+  'keells-redesign': keellsImg,
   ridego: ridegoImg,
 };
 
@@ -178,14 +179,25 @@ function ProjectModal({ project, onClose }) {
           )}
 
           {/* Quick links */}
-          {(project.github || project.live || project.figma || project.prototype) && (
+          {(project.github || project.live || project.figma || project.behance || project.prototype) && (
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.75rem' }}>
+              {project.behance && (
+                <a
+                  href={project.behance}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
+                >
+                  <ExternalLink size={15} /> View Case Study on Behance
+                </a>
+              )}
               {project.figma && (
                 <a
                   href={project.figma}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary"
+                  className={project.behance ? 'btn-ghost' : 'btn-primary'}
                   style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
                 >
                   <Figma size={15} /> View Figma Design
@@ -196,7 +208,7 @@ function ProjectModal({ project, onClose }) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={project.figma ? "btn-ghost" : "btn-primary"}
+                  className={(project.figma || project.behance) ? 'btn-ghost' : 'btn-primary'}
                   style={{ padding: '0.5rem 1rem', fontSize: '0.85rem' }}
                 >
                   <Github size={15} /> GitHub Repository

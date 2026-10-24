@@ -78,8 +78,6 @@ export const skillCategories = [
       { name: 'Responsive Design', icon: '📱' },
       { name: 'Figma', icon: '🎭' },
       { name: 'Canva', icon: '🖌️' },
-      { name: 'Adobe Illustrator', icon: '🖊️' },
-      { name: 'Adobe Photoshop', icon: '📷' },
     ],
   },
   {
@@ -382,58 +380,24 @@ export const projects = [
     imageAlt: 'GovCare.lk UI/UX design',
   },
 
-  // 9. LankaWay
-  {
-    id: 'lankaway',
-    title: 'LankaWay',
-    subtitle: 'Sri Lankan Travel & Tourism Mobile UI Design',
-    category: 'ui-ux',
-    type: 'design',
-    projectType: 'UI/UX Design Project',
-    status: 'Completed',
-    description:
-      "A modern travel and exploration platform design showcasing Sri Lanka's scenic destinations, travel routes, and cultural experiences.",
-    overview:
-      'LankaWay is a mobile-focused travel experience design connecting travelers with curated destinations, cultural landmarks, and seamless itinerary planning.',
-    problem:
-      'Tourists often struggle to find unified, authentic travel recommendations and route navigation tailored to Sri Lanka.',
-    solution:
-      'An immersive visual design with rich photography integration, curated category cards, and effortless itinerary booking.',
-    contribution: 'End-to-end UI design, visual aesthetics, typography selection, and mobile interaction design in Figma.',
-    technologies: ['Figma', 'UI/UX Design', 'Mobile Design', 'User Flows', 'Wireframing'],
-    features: [
-      'Destination discovery with curated recommendations',
-      'Interactive travel route planning interface',
-      'Cultural attraction highlights and travel tips',
-      'Clean mobile navigation and typography',
-      'Modern visual aesthetic tailored to tourism',
-    ],
-    github: null,
-    live: null,
-    figma: 'https://www.figma.com/design/pIESsukWlQJPEX5BCeeXnG/LankaWay?t=oWceFCmH0MWnInt9-1',
-    buttonText: 'View Figma Design',
-    prototype: null,
-    imageAlt: 'LankaWay UI/UX design',
-  },
-
-  // 10. Sri Lanka Railways – Case Study (Ongoing)
+  // 9. Sri Lanka Railways – Website Redesign Case Study
   {
     id: 'railways-case-study',
-    title: 'Sri Lanka Railways – Case Study',
-    subtitle: 'Digital Railway Ticketing & Scheduling System',
+    title: 'Sri Lanka Railways – Website Redesign Case Study',
+    subtitle: 'Website Redesign — UI/UX Case Study',
     category: 'ui-ux',
     type: 'design',
     projectType: 'UI/UX Case Study',
-    status: 'Ongoing Project',
+    status: 'Completed',
     description:
-      'A comprehensive UI/UX case study and design initiative modernizing the Sri Lanka Railways train booking, schedule lookup, and ticketing experience.',
+      'A comprehensive UI/UX case study redesigning the Sri Lanka Railways website to modernize the train booking, schedule lookup, and ticketing experience for commuters.',
     overview:
       'This case study investigates the pain points of Sri Lankan train commuters and reimagines the ticketing and seat reservation experience with modern digital flows.',
     problem:
       'Commuters encounter difficulty checking live train timings, seat availability, and reserving tickets without standing in prolonged station lines.',
     solution:
-      'A centralized digital railway ticketing interface featuring schedule exploration, live seat selection, and digital ticket passes.',
-    contribution: 'User research, empathy mapping, user journey modeling, wireframing, and interactive UI design in Figma.',
+      'A centralized digital railway website redesign featuring schedule exploration, live seat selection, and digital ticket passes with accessible UX for all commuter ages.',
+    contribution: 'User research, empathy mapping, user journey modeling, wireframing, and interactive UI design.',
     technologies: ['Figma', 'Case Study', 'UI/UX Design', 'User Research', 'Wireframing'],
     features: [
       'Intuitive train schedule lookup by station pairs',
@@ -444,30 +408,65 @@ export const projects = [
     ],
     github: null,
     live: null,
-    figma:
-      'https://www.figma.com/design/WetcjqsuSptPLvgkoMnLEf/Sri-Lanka-Railways---Case-Study?t=oWceFCmH0MWnInt9-1',
-    buttonText: 'View Figma Design',
+    figma: null,
+    behance: 'https://www.behance.net/gallery/256830229/Sri-Lanka-Railways-Website-Redesigning',
+    buttonText: 'View Case Study',
     prototype: null,
-    imageAlt: 'Sri Lanka Railways case study',
+    imageAlt: 'Sri Lanka Railways Website Redesign Case Study',
+  },
+
+  // 10. Keells App Redesign – Case Study
+  {
+    id: 'keells-redesign',
+    title: 'Keells App Redesign – Case Study',
+    subtitle: 'Grocery Shopping App — Personal UI/UX Redesign',
+    category: 'ui-ux',
+    type: 'design',
+    projectType: 'Personal UI/UX Redesign',
+    status: 'Completed',
+    description:
+      'An independent UI/UX redesign concept focused on simplifying grocery shopping through improved onboarding, navigation, product discovery, account management, and delivery or pickup scheduling.',
+    overview:
+      'Keells Redesigning is a personal UI/UX design project focused on improving the digital grocery shopping experience of the Keells Shopping app in Sri Lanka. By analysing my own experience using the existing app, its interface and navigation, and customer reviews on the Google Play Store, I identified usability challenges related to registration, repeated OTP verification, unclear navigation, duplicated account features, and delivery or pickup scheduling.',
+    problem:
+      'The Keells app had usability challenges including complex registration with repeated OTP verification, unclear navigation, duplicated account features, and a confusing delivery or pickup scheduling flow.',
+    solution:
+      'A redesign focused on a simpler, more intuitive, and user-friendly shopping experience by improving the onboarding process, organizing navigation, enhancing product discovery, and simplifying account management and checkout.',
+    contribution: 'User Research, UX Analysis, Information Architecture, User Flows, Wireframing, UI Design, Design Systems, and Prototyping in Figma.',
+    technologies: ['Figma', 'UI/UX Design', 'User Research', 'Wireframing', 'Prototyping', 'Design System'],
+    features: [
+      'Simplified onboarding and registration flow',
+      'Reorganized navigation and product discovery',
+      'Streamlined delivery and pickup scheduling',
+      'Improved account management and checkout',
+      'Comprehensive design system and prototype',
+    ],
+    github: null,
+    live: null,
+    figma: 'https://www.figma.com/design/M1jJwLFw3l1DcsmQ6ir2Y4/Keells-App-Redesign?node-id=1-18&t=mxSkp4lHLJGOPNQQ-1',
+    behance: 'https://www.behance.net/gallery/257426709/Keells-Shopping-App-Redesign',
+    buttonText: 'View Case Study',
+    prototype: null,
+    imageAlt: 'Keells App Redesign – Case Study',
   },
 
   // 11. RideGo
   {
     id: 'ridego',
-    title: 'RideGo',
-    subtitle: 'Ride-Hailing & Mobility UI Wireframe',
+    title: 'RideGo – Smart Ride Booking Mobile App UI/UX',
+    subtitle: 'Smart Ride Booking Mobile App UI/UX',
     category: 'ui-ux',
     type: 'design',
     projectType: 'UI/UX Design Project',
     status: 'Completed',
     description:
-      'User interface and wireframe design for RideGo, a streamlined on-demand ride-hailing and transportation mobile application.',
+      'A comprehensive UI/UX design for RideGo, a smart on-demand ride booking mobile app focused on a friction-free booking journey with upfront pricing and live tracking.',
     overview:
       'RideGo provides a friction-free booking journey for daily commuters, incorporating upfront fare estimation, vehicle class choices, and live route tracking.',
     problem:
       'Ride-hailing apps can become cluttered with extraneous promotional items that obscure essential pickup and destination information.',
     solution:
-      'A focused, distraction-free wireframe and interface emphasizing immediate pickup booking, driver details, and transparent pricing.',
+      'A focused, distraction-free interface emphasizing immediate pickup booking, driver details, and transparent pricing.',
     contribution: 'Low-fidelity wireframing, user interaction flow, and high-fidelity interface design in Figma.',
     technologies: ['Figma', 'UI/UX Design', 'Wireframing', 'Mobile App Design', 'Prototyping'],
     features: [
@@ -479,10 +478,11 @@ export const projects = [
     ],
     github: null,
     live: null,
-    figma: 'https://www.figma.com/design/yAvcQCWd9ZdVurlesmzemR/RideGo-UI---Wireframe?t=oWceFCmH0MWnInt9-1',
-    buttonText: 'View Figma Design',
+    figma: null,
+    behance: 'https://www.behance.net/gallery/249068577/RideGo-Smart-Ride-Booking-Mobile-App-UIUX',
+    buttonText: 'View Case Study',
     prototype: null,
-    imageAlt: 'RideGo wireframe design',
+    imageAlt: 'RideGo Smart Ride Booking Mobile App UI/UX',
   },
 ];
 
@@ -657,6 +657,11 @@ export const achievements = [
     icon: '🏆',
     link: null,
     buttonText: null,
+    certificate: '/src/assets/CodeRally Certificate.jpeg',
+    photos: [
+      '/src/assets/CodeRally 1.jpg',
+      '/src/assets/CodeRally 2.jpg',
+    ],
     image: null,
     imageAlt: 'CodeRally 7.0 Beginner Tier Runner-Up Achievement',
   },
@@ -673,6 +678,8 @@ export const achievements = [
     icon: '🎯',
     link: null,
     buttonText: null,
+    certificate: '/src/assets/CodeArena.jpeg',
+    photos: [],
     image: null,
     imageAlt: "CodeArena'26 Finalist Achievement",
   },

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Menu, X, Download, ChevronRight } from 'lucide-react';
-import { CV_URL } from '../../data/portfolioData';
+import { Menu, X, ChevronRight } from 'lucide-react';
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -110,19 +109,8 @@ function Navbar() {
             })}
           </ul>
 
-          {/* Right actions */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a
-              href={CV_URL}
-              download
-              className="btn-primary"
-              style={{ padding: '0.5rem 1.25rem', fontSize: '0.82rem' }}
-              aria-label="Download CV"
-            >
-              <Download size={14} />
-              Download CV
-            </a>
-          </div>
+          {/* Right actions — placeholder for future use */}
+          <div className="hidden lg:flex items-center gap-3" />
 
           {/* Mobile hamburger */}
           <button
@@ -190,18 +178,6 @@ function Navbar() {
           );
         })}
 
-        <div className="mt-4 pt-4" style={{ borderTop: '1px solid var(--border-subtle)' }}>
-          <a
-            href={CV_URL}
-            download
-            className="btn-primary w-full justify-center"
-            style={{ width: '100%', justifyContent: 'center' }}
-            onClick={() => setMobileOpen(false)}
-          >
-            <Download size={15} />
-            Download CV
-          </a>
-        </div>
       </nav>
     </>
   );

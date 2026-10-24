@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Download, ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, MediumIcon, BehanceIcon } from '../icons/SocialIcons';
-import profileImg from '../../assets/Profile Pic.jpg';
-import { CV_URL, CONTACT } from '../../data/portfolioData';
+import profileImg from '../../assets/Profile Picture.png';
+import { CONTACT } from '../../data/portfolioData';
 
 const TITLES = [
   'UI/UX Designer',
@@ -70,7 +70,7 @@ function Hero() {
         paddingBottom: '3rem',
         position: 'relative',
         overflow: 'hidden',
-        background: 'linear-gradient(135deg, var(--bg-primary) 0%, #0d0d1a 100%)',
+        background: 'linear-gradient(135deg, var(--bg-primary) 0%, #0a1628 100%)',
       }}
     >
       {/* Background decorations */}
@@ -190,14 +190,14 @@ function Hero() {
                 <ArrowRight size={16} />
               </a>
               <a
-                href={CV_URL}
-                download
+                href="#contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
                 className="btn-secondary"
-                id="hero-download-cv-btn"
-                aria-label="Download CV PDF"
+                id="hero-contact-btn"
+                aria-label="Contact Me"
               >
-                <Download size={15} />
-                Download CV
+                <Mail size={15} />
+                Contact Me
               </a>
             </div>
 
@@ -273,8 +273,8 @@ function Hero() {
                 inset: '-16px',
                 borderRadius: '50%',
                 background:
-                  'conic-gradient(from 0deg, var(--accent), var(--accent-light), #c084fc, var(--accent))',
-                opacity: 0.25,
+                  'conic-gradient(from 0deg, var(--accent), var(--accent-light), #93c5fd, var(--accent))',
+                opacity: 0.3,
                 filter: 'blur(12px)',
               }}
             />
@@ -286,7 +286,7 @@ function Hero() {
                 height: 'clamp(240px, 22vw, 320px)',
                 borderRadius: '50%',
                 padding: '3px',
-                background: 'linear-gradient(135deg, var(--accent), var(--accent-light), #c084fc)',
+                background: 'linear-gradient(135deg, var(--accent), var(--accent-light), #93c5fd)',
                 position: 'relative',
                 zIndex: 1,
               }}
