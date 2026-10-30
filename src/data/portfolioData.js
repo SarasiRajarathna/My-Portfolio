@@ -408,7 +408,7 @@ export const projects = [
     ],
     github: null,
     live: null,
-    figma: null,
+    figma: 'https://www.figma.com/design/WetcjqsuSptPLvgkoMnLEf/Sri-Lanka-Railways---Case-Study?node-id=209-1985&t=B9AIx9usCA58jzWZ-1',
     behance: 'https://www.behance.net/gallery/256830229/Sri-Lanka-Railways-Website-Redesigning',
     buttonText: 'View Case Study',
     prototype: null,
@@ -478,11 +478,83 @@ export const projects = [
     ],
     github: null,
     live: null,
-    figma: null,
+    figma: 'https://www.figma.com/design/yAvcQCWd9ZdVurlesmzemR/RideGo-UI---Wireframe?node-id=0-1&t=ALcqQY5HSMgIbhjp-1',
     behance: 'https://www.behance.net/gallery/249068577/RideGo-Smart-Ride-Booking-Mobile-App-UIUX',
     buttonText: 'View Case Study',
     prototype: null,
     imageAlt: 'RideGo Smart Ride Booking Mobile App UI/UX',
+  },
+
+  // 12. Coffee Shop App UI/UX Designing
+  {
+    id: 'coffee-shop',
+    title: 'Coffee Shop App UI/UX Designing',
+    subtitle: 'Mobile App UI/UX Design',
+    category: 'ui-ux',
+    type: 'design',
+    projectType: 'UI/UX Design Project',
+    status: 'Completed',
+    description:
+      'A modern coffee shop mobile app UI/UX concept focused on intuitive navigation, attractive visuals, and a seamless experience for exploring coffee options.',
+    overview:
+      'A modern and visually appealing coffee shop mobile app designed to create a smooth and enjoyable experience for coffee lovers. This project focuses on combining an attractive user interface with intuitive navigation, making it easy for users to explore coffee options and enjoy a seamless mobile experience.',
+    problem:
+      'Coffee shop apps often lack visual appeal and intuitive navigation, making it difficult for users to browse menus and place orders comfortably.',
+    solution:
+      'A clean and engaging mobile interface that explores layout composition, color harmony, typography, and visual hierarchy to deliver a delightful coffee discovery experience.',
+    contribution:
+      'UI/UX design exploring layout composition, color harmony, typography, and visual hierarchy to create a clean and engaging interface.',
+    technologies: ['Figma', 'UI/UX Design', 'Mobile App Design', 'Wireframing', 'Prototyping'],
+    features: [
+      'Attractive and intuitive coffee menu exploration',
+      'Smooth and engaging mobile navigation flow',
+      'Cohesive color palette and typography system',
+      'Visual hierarchy and layout composition',
+      'User-friendly mobile experience for coffee lovers',
+    ],
+    github: null,
+    live: null,
+    figma: 'https://www.figma.com/design/019zm0odvIRbRCMO6Z29jA/Coffee-Shop-App-UI?node-id=1-18&t=Lk2CFBNATUXZzGB2-1',
+    behance: 'https://www.behance.net/gallery/257572237/Coffee-Shop-App-UI',
+    buttonText: 'View Case Study',
+    prototype: null,
+    imageAlt: 'Coffee Shop App UI/UX Design',
+  },
+
+  // 13. CleanCare – Smart Laundry Service Mobile App
+  {
+    id: 'cleancare',
+    title: 'CleanCare – Smart Laundry Service Mobile App',
+    subtitle: 'Smart Laundry Service Mobile App UI/UX',
+    category: 'ui-ux',
+    type: 'design',
+    projectType: 'UI/UX Design Project',
+    status: 'Completed',
+    description:
+      'A smart laundry service mobile app concept that simplifies garment care through easy service selection, doorstep pickup scheduling, secure payments, and real-time order tracking.',
+    overview:
+      'CleanCare is a modern laundry service mobile app concept designed to simplify everyday laundry management for people with busy lifestyles. The app provides a convenient way to access professional laundry services without visiting a physical laundry shop. Users can explore different laundry services, select garments, schedule doorstep pickups, make payments, and track their orders in real time. Once the laundry is cleaned, it is delivered directly to their doorstep.',
+    problem:
+      'People with busy lifestyles struggle to manage laundry effectively, especially for delicate and special-fabric garments that require professional care.',
+    solution:
+      'A streamlined mobile app that connects users to professional laundry services with doorstep pickup and delivery, secure payments, and real-time tracking — designed with a focus on simplicity, convenience, and accessibility.',
+    contribution:
+      'User research, information architecture, wireframing, high-fidelity UI design, and interactive prototyping in Figma.',
+    technologies: ['Figma', 'UI/UX Design', 'Mobile App Design', 'Wireframing', 'Prototyping'],
+    features: [
+      'Easy service selection and garment categorization',
+      'Doorstep pickup and delivery scheduling',
+      'Secure in-app payment integration',
+      'Real-time order tracking and status updates',
+      'Special garment care and professional cleaning access',
+    ],
+    github: null,
+    live: null,
+    figma: 'https://www.figma.com/design/we1qNj8fOM7fbFflqiPkh8/CleanCare-App?node-id=12-124&t=Lk2CFBNATUXZzGB2-1',
+    behance: 'https://www.behance.net/gallery/257834989/CleanCare-Smart-Laundry-Service-Mobile-App',
+    buttonText: 'View Case Study',
+    prototype: null,
+    imageAlt: 'CleanCare Smart Laundry Service Mobile App',
   },
 ];
 

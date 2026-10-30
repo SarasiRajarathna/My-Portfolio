@@ -62,7 +62,7 @@ function Projects() {
 
           {/* Filter buttons */}
           <div
-            className={`fade-up delay-200 ${isVisible ? 'visible' : ''}`}
+            className={`fade-up delay-200 ${isVisible ? 'visible' : ''} filter-tabs-row`}
             style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2.5rem' }}
             role="tablist"
             aria-label="Project categories"
@@ -83,7 +83,7 @@ function Projects() {
 
           {/* Project grid */}
           <div
-            className={`fade-up delay-300 ${isVisible ? 'visible' : ''}`}
+            className={`fade-up delay-300 ${isVisible ? 'visible' : ''} projects-grid`}
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',

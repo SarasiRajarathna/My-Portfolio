@@ -12,6 +12,8 @@ import velouraImg from '../../assets/Veloura.png';
 import vitadermaImg from '../../assets/Vita-Derma.png';
 import railwaysImg from '../../assets/Sri Lanka Railways.png';
 import keellsImg from '../../assets/Keells App Redesign.png';
+import coffeeImg from '../../assets/Coffee.jpg';
+import cleancareImg from '../../assets/CleanCare.png';
 
 const PROJECT_IMAGES = {
   govcare: govcareImg,
@@ -25,6 +27,8 @@ const PROJECT_IMAGES = {
   'railways-case-study': railwaysImg,
   'keells-redesign': keellsImg,
   ridego: ridegoImg,
+  'coffee-shop': coffeeImg,
+  cleancare: cleancareImg,
 };
 
 const CATEGORY_META = {
