@@ -14,7 +14,7 @@ const FILTERS = [
 function Projects() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
-  const [sectionRef, isVisible] = useScrollAnimation();
+  const [sectionRef, isVisible] = useScrollAnimation(0);
 
   const filtered =
     activeFilter === 'all'

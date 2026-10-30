@@ -630,6 +630,18 @@ html {
   }
 }
 
+/* ── Projects section: ensure content is always visible on mobile ─
+   The IntersectionObserver threshold=0 fires as soon as any pixel
+   of the section enters the viewport. As an additional safety net,
+   force .fade-up children inside #projects to be visible on mobile
+   so a missed observer trigger never hides project cards.          */
+@media (max-width: 768px) {
+  #projects .fade-up {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
 /* Technology badge in project card */
 .tech-badge {
   display: inline-block;
